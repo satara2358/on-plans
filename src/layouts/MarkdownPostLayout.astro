@@ -1,0 +1,27 @@
+---
+import Footer from "../components/Footer.astro";
+import Plantilla from "./plantilla.astro";
+
+
+const { frontmatter } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{frontmatter.title}</title>
+</head>
+<body>
+  <Plantilla/>
+  <h1>{frontmatter.title} ====== esto viene de Markdow</h1>
+  <p>{frontmatter.pubDate.slice(0,10)}</p>
+  <p><em>{frontmatter.description}</em></p>
+  <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
+  <p>Hasta aqui Markdown ===== Escrito por: {frontmatter.author}</p>
+  <slot/>
+  <Footer />
+</body>
+</html>
+
+
