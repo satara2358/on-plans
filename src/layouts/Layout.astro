@@ -3,6 +3,7 @@ import '../styles/global.css';
 
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Greeting from '../components/Greeting';
 
 // export interface Props {
 // 	title: string;
@@ -22,7 +23,7 @@ const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Redacción de do
 const happy = true;
 const finished = true;
 const goal = 3;
-const skillColor = "navy";
+const skillColor = '#f38c37';
 const fontWeight = "bold";
 const textCase = "uppercase";
 ---
@@ -57,11 +58,12 @@ const textCase = "uppercase";
 			{finished && <p>¡He terminado este tutorial!</p>}
 			{goal === 3 ? <p>Mi objetivo es terminar en 3 días.</p> : <p>Mi objetivo no son 3 días.</p>}
 		</ul>
+		<Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
 		<Footer />
 	</body>
 	<style define:vars={{skillColor, fontWeight, textCase}}>
 		h1 {
-			color: purple;
+			color: #f38c37;
 			font-size: 4rem;
 		}
 		.skill {

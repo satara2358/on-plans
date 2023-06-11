@@ -54,7 +54,7 @@ h1 {
 }
 
 .nav-links a:hover, a:focus {
-  background-color: #ff9776;
+  background-color: #88a79a;
 }
 
 .expanded {
@@ -77,4 +77,13 @@ h1 {
   .hamburger {
     display: none;
   }
+}
+/* Tema ---------------------*/
+html.dark {
+  background-color: #1c1b25;
+  color: #f38c37;
+}
+
+.dark .nav-links a {
+  color: #70496d;
 }
